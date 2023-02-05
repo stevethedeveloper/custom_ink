@@ -1,2 +1,2 @@
 # custom_ink
-Take home project for Custom In/Printfection
+Take home project for Custom Ink/Printfection
