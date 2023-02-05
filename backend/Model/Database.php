@@ -12,6 +12,7 @@ class Database
         
         try {
             $this->connection = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
+            $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         } catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int)$e->getCode());
         }
