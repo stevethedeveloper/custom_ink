@@ -8,6 +8,11 @@ if ((isset($uri[1]) && $uri[1] != 'url') || !isset($uri[2])) {
 }
 require APP_PATH . "/Controller/UrlController.php";
 $urlController = new UrlController();
+
+// TODO:  Better routing, this is quick and dirty.
+// Frameworks offer routing out of the box, or a routing class can be created
+// to handle a wider number of scenarios.
 $methodName = $uri[2];
-$urlController->{$methodName}();
+$param = (isset($uri[3])) ? $uri[3] : NULL;
+$urlController->{$methodName}($param);
 ?>

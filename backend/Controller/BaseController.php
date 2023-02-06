@@ -1,16 +1,14 @@
 <?php
 class BaseController
 {
-    /** 
-    * __call magic method, throws 404 by default
-    */
+    // If method doesn't exist, throws 404 by default
     public function __call($name, $arguments)
     {
         $this->sendOutput('', array('HTTP/1.1 404 Not Found'));
     }
 
     /** 
-    * Send JSON output
+    * Output headers and JSON
     * 
     * @param string $responseCode 
     * @param mixed $data 
