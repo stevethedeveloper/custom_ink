@@ -1,4 +1,17 @@
 <?php
+// This is temporary and the origin below should not be a wildcard, and will depend on how the front and back are deployed
+// This backend is currently secured by .htaccess
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: POST, DELETE, OPTIONS");
+header("Access-Control-Max-Age: 3600");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {    
+    return 0;    
+ }    
+// End temporary headers
+
 require __DIR__ . "/config/bootstrap.php";
 $uri = parse_url($_SERVER['PATH_INFO'], PHP_URL_PATH);
 $uri = explode( '/', $uri );

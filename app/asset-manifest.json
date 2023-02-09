@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/projects/custom_ink/app/static/css/main.050be1d8.css",
+    "main.js": "/projects/custom_ink/app/static/js/main.b550c7c6.js",
+    "index.html": "/projects/custom_ink/app/index.html",
+    "main.050be1d8.css.map": "/projects/custom_ink/app/static/css/main.050be1d8.css.map",
+    "main.b550c7c6.js.map": "/projects/custom_ink/app/static/js/main.b550c7c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.050be1d8.css",
+    "static/js/main.b550c7c6.js"
+  ]
+}
