@@ -1,16 +1,14 @@
+// Service for retrieving and posting via axios
+
 import axios from "axios";
+
 const baseUrl =
   "https://stevethedeveloper.com/projects/custom_ink/backend/index.php/url";
-
-const getAll = () => {
-  const request = axios.get(`${baseUrl}/get/all`);
-  return request.then((response) => response.data);
-};
 
 const add = (newObject) => {
   const request = axios({
     method: "post",
-    url: "https://stevethedeveloper.com/projects/custom_ink/backend/index.php/url/add",
+    url: `${baseUrl}/add`,
     data: newObject,
     headers: { "Content-Type": "multipart/form-data" },
   });
@@ -22,4 +20,9 @@ const get = (shortCode, newObject) => {
   return request.then((response) => response.data);
 };
 
-export default { getAll, add, get };
+const exportObject = {
+  add,
+  get,
+};
+
+export default exportObject;
