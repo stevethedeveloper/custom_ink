@@ -1,8 +1,6 @@
 order deny,allow
 deny from all
 allow from 127.0.0.1
-allow from 72.193.6.233
-allow from 71.49.136.36
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
